@@ -80,7 +80,7 @@ Time: ${time}
 Passengers: ${passengers}
 Captain: ${boat === "5m" ? captain : "Included"}
 Payment: ${getPriceSummary()}
-Transfer: ${bookingType === "Transfer" ? \`From ${info.transferFrom} to ${info.transferTo}\` : "N/A"}
+Transfer: ${bookingType === "Transfer" ? "From " + info.transferFrom + " to " + info.transferTo : "N/A"}
 Address: ${[info.country, info.address, info.city, info.state, info.zip].filter(Boolean).join(" ")}`;
 
     fetch("https://formsubmit.co/ajax/info@axisyachtcharters.com", {
